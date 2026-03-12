@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(int argc, char* argv[]) {
+int main(void) {
     
     char *line = NULL;
     size_t len = 0;
@@ -10,6 +10,7 @@ int main(int argc, char* argv[]) {
 
     while(1) {
         printf("myshell> ");
+        fflush(stdout);
 
         read = getline(&line, &len, stdin);
         
